@@ -10,10 +10,11 @@ public class MixerScript : MonoBehaviour
     public AudioMixer audioMix;
     public AudioMixerSnapshot snap100;
     public AudioMixerSnapshot snap50;
+    public AudioClip buttonClick;
 
     public Slider volumeSlider;
 
-    bool bPause = false;
+    //bool bPause = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +30,8 @@ public class MixerScript : MonoBehaviour
 
     public void Pause()
     {
-        bPause = !bPause;
-        if (bPause)
+        //bPause = !bPause;
+        if (PauseMenuScript.GameIsPaused)
         {
             snap50.TransitionTo(0.5f);
         }
@@ -43,5 +44,14 @@ public class MixerScript : MonoBehaviour
     public void SetVolume()
     {
         audioMix.SetFloat("MasterVolume", volumeSlider.value);
+    }
+
+    public void ButtonHighlighted(int track)
+    {
+        if (track == 1)
+        {
+            
+            Debug.Log("Play button highlighted");
+        }
     }
 }
