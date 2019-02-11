@@ -37,7 +37,7 @@ AudioMixerController:
     - dfdf18b21bdfc4141b5ab6e99c0e91ae
     name: EchoView
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 245936812819402272}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
